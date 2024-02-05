@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "target": "es5",
+    "lib": [
+      "es5",
+      "dom"
+    ],
+    "types": [
+      "cypress",
+      "node"
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "@badeball/cypress-cucumber-preprocessor/*": [
+        "./node_modules/@badeball/cypress-cucumber-preprocessor/dist/subpath-entrypoints/*"
+      ],
+      "~Commands/*": [
+        "cypress/support/commands/*"
+      ],
+      "~StepDefinitions/*": [
+        "cypress/support/step_definitions/*"
+      ],
+      "~TestData/*": [
+        "cypress/fixtures/test-data/*"
+      ]
+    }
+  },
+  "include": [
+    "**/*.ts"
+  ]
+}
