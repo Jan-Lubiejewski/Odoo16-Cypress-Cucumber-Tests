@@ -8,5 +8,7 @@ declare namespace Cypress {
       getButtonByPartialText(buttonText: string): Chainable<JQuery<HTMLElement>>;
       getButtonByTitle(btnTitle: string): Chainable<JQuery<HTMLElement>>;
       getLinkByText(linkText: string): Chainable<JQuery<HTMLElement>>;
+      getByName(name: string) : Chainable<JQuery<HTMLElement>>;
+      getByTooltip(role: string) : Chainable<JQuery<HTMLElement>>;
     }
 }

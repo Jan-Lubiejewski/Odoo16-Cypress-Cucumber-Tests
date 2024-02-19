@@ -12,11 +12,12 @@
     ],
     "baseUrl": "./",
     "paths": {
+      "~*": ["./cypress/*"],
       "@badeball/cypress-cucumber-preprocessor/*": [
         "./node_modules/@badeball/cypress-cucumber-preprocessor/dist/subpath-entrypoints/*"
       ],
       "~Commands/*": [
-        "cypress/support/commands/*"
+        "cypress/support/step_definitions/commands/*"
       ],
       "~StepDefinitions/*": [
         "cypress/support/step_definitions/*"

@@ -1,5 +1,10 @@
 const getAlert = () => cy.get('.alert');
 
+const assertPage = (title: string, url: string): void => {
+  cy.getByClass('breadcrumb').should('have.text', title);
+  cy.url().should('include', url);
+};
+
 const assertAlert = (option: 'including' | 'equals', alertText: string) => {
     return getAlert()
       .should('be.visible')
@@ -15,7 +20,12 @@ const assertAlert = (option: 'including' | 'equals', alertText: string) => {
       });
   };
   
+  const assertActiveBreadcrumb = (text: string) => {
+    cy.getByClass('o_last_breadcrumb_item').should('have.text', text);
+  };
   
   export const commonCommands = {
-    assertAlert
+    assertPage,
+    assertAlert,
+    assertActiveBreadcrumb,
   };

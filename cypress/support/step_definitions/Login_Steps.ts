@@ -1,6 +1,6 @@
 import { Before, Given, Then } from '@badeball/cypress-cucumber-preprocessor';
 import { admin } from '../../fixtures/test-data/User';
-import '~Commands/Selector_Commands';
+import '~StepDefinitions/commands/Selector_Commands';
 
 Before(() => {
   cy.visit('/web/login');

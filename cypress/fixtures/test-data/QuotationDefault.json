@@ -1,0 +1,19 @@
+{
+  "customer": {
+    "name": "Gemini Furniture, Soham Palmer",
+    "address": {
+      "street": "317 Fairchild Dr",
+      "city": "Fairfield CA",
+      "zip": "US12345674"
+    }
+  },
+  "saleOrderTemplate": "Allied Access - Numuw / Consulting / Billable",
+  "invoicePeriod": "09/01/2023",
+  "pricelist": "PLN Currency (PLN)",
+  "currency": {
+    "code": "USD",
+    "symbol": "$"
+  },
+  "paymentTerm": "21 Days",
+  "salesperson": "Manager"
+}

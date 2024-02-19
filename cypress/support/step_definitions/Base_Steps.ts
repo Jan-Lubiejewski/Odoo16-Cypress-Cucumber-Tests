@@ -1,8 +1,8 @@
-import '~Commands/Selector_Commands';
+import '~StepDefinitions/commands/Selector_Commands';
 
 import { Then, When } from '@badeball/cypress-cucumber-preprocessor';
 
-import { commonCommands } from '../commands/Common_Commands'; //'~Commands/Common_Commands';
+import { commonCommands } from './commands/Common_Commands'; //'~Commands/Common_Commands';
 
 When(
     'I fill {string} into input with label {string} and id {string}',

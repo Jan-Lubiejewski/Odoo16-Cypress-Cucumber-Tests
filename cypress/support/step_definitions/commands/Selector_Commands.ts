@@ -22,3 +22,11 @@
   Cypress.Commands.add('getLinkByText', { prevSubject: ['optional'] }, (subject: void | string, linkText: string) => {
     return subject ? cy.wrap(subject).find(`a:contains("${linkText}")`) : cy.get(`a:contains("${linkText}")`);
   });
+
+  Cypress.Commands.add('getByName', { prevSubject: ['optional'] }, (subject: void | string, name: string) => {
+    return subject ? cy.wrap(subject).find(`[name="${name}"]`) : cy.get(`[name="${name}"]`);
+  });
+
+  Cypress.Commands.add('getByTooltip', { prevSubject: ['optional'] }, (subject: void | string, dataTooltip: string) => {
+    return subject ? cy.wrap(subject).find(`[data-tooltip="${dataTooltip}"]`) : cy.get(`[data-tooltip="${dataTooltip}"]`);
+  });
