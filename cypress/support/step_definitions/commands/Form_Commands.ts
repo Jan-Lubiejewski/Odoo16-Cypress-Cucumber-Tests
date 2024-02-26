@@ -14,12 +14,11 @@ const fillInputByLabel = (labelText: string, id: string, value: string | boolean
       cy.getInputByLabel(labelText).should('be.visible').and('have.attr', 'for', id);
       cy.getInputById(id).clear();
       cy.getInputById(id).type(value);
-      // cy.getInputById(id).wait(500);
-      cy.click();
       cy.getInputById(id).click(); // click enables dropdown
-      cy.get('a').then(($element) => {
-        if (!$element.text().includes(value)) {
-          cy.wait(500);
+      cy.wait(2500);
+      cy.get('a').then(($elements) => {
+        if ($elements.length <= 42 ) {
+          cy.wait(1000);
           cy.getInputById(id).click();
         }
       });

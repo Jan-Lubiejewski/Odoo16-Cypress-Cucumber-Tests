@@ -29,7 +29,7 @@ When(
   });
   
   When('I click {string} button', (buttonName: string) => {
-    cy.getButtonByPartialText(buttonName).click();
+    cy.getButtonByPartialText(buttonName).first().click();
   });
   
   When('I click button with title {string}', (buttonTitle: string) => {

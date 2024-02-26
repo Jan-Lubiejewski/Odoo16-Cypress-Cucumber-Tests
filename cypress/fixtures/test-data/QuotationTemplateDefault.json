@@ -1,5 +1,5 @@
 {
-    "name": "Allied Access - Numuw / Consulting / Billable",
+    "name": "Large Meeting Table",
     "numberOfDays": "45",
     "mailTemplateId": false,
     "clientName": "Allied Access",
@@ -11,10 +11,10 @@
     },
     "products": [
       {
-        "productName": "[FURN_8999] Three-Seat Sofa",
-        "name": "[FURN_8999] Three-Seat Sofa\nThree Seater Sofa with Lounger in Steel Grey Colour",
+        "productName": "[FURN_6741] Large Meeting Table",
+        "name": "Large Meeting Table",
         "productUomQty": 1.0,
-        "unitPrice": 173.00,
+        "unitPrice": 4000.00,
         "tax": "15%"
       }
     ]

@@ -30,3 +30,9 @@
   Cypress.Commands.add('getByTooltip', { prevSubject: ['optional'] }, (subject: void | string, dataTooltip: string) => {
     return subject ? cy.wrap(subject).find(`[data-tooltip="${dataTooltip}"]`) : cy.get(`[data-tooltip="${dataTooltip}"]`);
   });
+
+  Cypress.Commands.add('getTabByText', { prevSubject: ['optional'] }, (subject: void | string, tabText: string) => {
+    // eslint-disable-next-line @typescript-eslint/no-base-to-string
+    const selector = subject ? `${subject} [role="tab"]:contains("${tabText}")` : `[role="tab"]:contains("${tabText}")`;
+    return cy.get(selector);
+  });
