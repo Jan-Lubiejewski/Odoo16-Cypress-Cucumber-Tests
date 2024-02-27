@@ -36,3 +36,11 @@
     const selector = subject ? `${subject} [role="tab"]:contains("${tabText}")` : `[role="tab"]:contains("${tabText}")`;
     return cy.get(selector);
   });
+
+  Cypress.Commands.add('getTabByText', { prevSubject: ['optional'] }, (subject: void | string, linkName: string) => {
+    return subject ? cy.wrap(subject).find(`[name="${linkName}"] > a`) : cy.get(`[name="${linkName}"] > a`);
+  });
+
+  Cypress.Commands.add('getTabByText', { prevSubject: ['optional'] }, (subject: void | string, placeholder: string) => {
+    return subject ? cy.wrap(subject).find(`[placeholder="${placeholder}"]`) : cy.get(`[placeholder="${placeholder}"]`);
+  });

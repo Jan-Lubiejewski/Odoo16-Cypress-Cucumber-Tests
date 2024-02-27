@@ -11,5 +11,7 @@ declare namespace Cypress {
       getByName(name: string) : Chainable<JQuery<HTMLElement>>;
       getByTooltip(role: string) : Chainable<JQuery<HTMLElement>>;
       getTabByText(role: string) : Chainable<JQuery<HTMLElement>>;
+      getLinkByName(linkName: string): Chainable<JQuery<HTMLElement>>;
+      getByPlaceholder(placeholder: string): Chainable<JQuery<HTMLElement>>;
     }
 }
